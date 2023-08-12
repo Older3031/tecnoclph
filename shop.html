@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Agregar las etiquetas meta necesarias, título, hojas de estilo, etc. -->
+  <title>TECNOCLPH - Tienda</title>
+  <!-- Enlazar el archivo "shared.js" -->
+  <script src="shared.js" defer></script>
+  <!-- Agregar la hoja de estilos para "shop.html" -->
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+  <!-- Agregar aquí el contenido del encabezado -->
+  <header>
+    <div class="container-hero">
+        <div class="container hero">
+            <div class="customer-support">
+                <i class="fa-solid fa-headset"></i>
+                <div class="content-customer-support">
+                    <span class="text">Soporte al cliente</span>
+                    <span class="number">tecnoclph@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="container-logo">
+                <i class="fa-solid fa-mobile"></i>
+                <h1 class="logo"><a href="/">TECNOCLPH</a></h1>
+            </div>
+
+            <div class="container-user">
+                <a href="login.html"><i class="fa-solid fa-user"></i></a>
+                <i class="fa-solid fa-basket-shopping"></i>
+                <div class="content-shopping-cart">
+                    <a href="shop.html"><span class="text">Carrito</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-navbar">
+        <nav class="navbar container">
+            <i class="fa-solid fa-bars"></i>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li>
+                    <a href="">Telefonos</a> <i class="fa-sharp fa-solid fa-caret-down"></i>
+                    <ul class="submenu">
+                        <li><a href="telapple.html">Apple</a></li>
+                        <li><a href="telsamsung.html">Samsung</a></li>
+                        <li><a href="telxiaomi.html">Xiaomi</a></li>
+                    </ul>
+        
+                </li>
+                
+                <li>
+                    <a href="#">Accesorios</a><i class="fa-sharp fa-solid fa-caret-down"></i>
+                    <ul class="submenu">
+                        <li><a href="accapple.html">Apple</a></li>
+                        <li><a href="accsamsung.html">Samsung</a></li>
+                        <li><a href="accxiaomi.html">Xiaomi</a></li>
+                    </ul>
+                </li>
+                <li><a href="social.html">Más</a></li>
+                <li><a href="https://twitter.com/tecnoclph">Blog</a></li>
+            </ul>
+
+            <form class="search-form" id="myForm">
+                <input type="search" placeholder="Buscar..." />
+                <button class="btn-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            
+        </nav>
+    </div>
+</header>
+
+
+<main class="container-main">
+    
+    <div class="container-products">
+
+        <script>
+            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+          
+            function updateTotal() {
+              const totalAmountElement = document.querySelector(".total-amount");
+              const total = cartItems.reduce((total, product) => total + parseFloat(product.price), 0);
+              totalAmountElement.textContent = total.toFixed(2);
+            }
+          
+            function updateCart() {
+              const containerProducts = document.querySelector(".container-products");
+              containerProducts.innerHTML = "";
+              cartItems.forEach((product, index) => {
+                const productCard = document.createElement("div");
+                productCard.className = "product-card";
+          
+                const productTitleElement = document.createElement("div");
+                productTitleElement.className = "product-title";
+                productTitleElement.textContent = product.title;
+          
+                const productImgElement = document.createElement("div");
+                productImgElement.className = "product-img";
+                const imgElement = document.createElement("img");
+                imgElement.src = decodeURIComponent(product.imgSrc);
+                imgElement.alt = "imagen-producto";
+                productImgElement.appendChild(imgElement);
+          
+                const productPriceElement = document.createElement("div");
+                productPriceElement.className = "product-price";
+                productPriceElement.textContent = product.price;
+          
+                const deleteButton = document.createElement("button");
+                deleteButton.className = "delete-button";
+                deleteButton.textContent = "x";
+          
+                deleteButton.addEventListener("click", () => {
+                  cartItems.splice(index, 1);
+                  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                  updateCart();
+                  updateTotal();
+                });
+          
+                productCard.appendChild(productTitleElement);
+                productCard.appendChild(productImgElement);
+                productCard.appendChild(productPriceElement);
+                productCard.appendChild(deleteButton);
+          
+                containerProducts.appendChild(productCard);
+              });
+          
+              updateTotal();
+            }
+          
+            updateCart();
+
+            
+
+          </script>
+          
+    
+    
+ </div>
+  </main>
+
+<!-- Cuadro de compra -->
+ <aside class="checkout-box">
+    <h2>Carrito de Compra</h2>
+    <ul class="checkout-items">
+      <!-- Productos seleccionados se agregarán dinámicamente aquí -->
+    </ul>
+ 
+    <button class="btn-checkout"><a href="fom.html">Realizar Compra</a></button>
+  </aside>
+
+  <!-- Agregar aquí el contenido del pie de página -->
+  <footer class="footer">
+    <div class="container container-footer">
+        <div class="menu-footer">
+            <div class="contact-info">
+                <p class="title-footer">Información de Contacto</p>
+                <ul>
+                    <li>
+                        Dirección: 6a. avenida 12-51 Zona 1, 5 nivel kiosco 319 Centro Comercial Los Capitol
+                    </li>
+                    <li>Teléfono: +502 39974796</li>
+                    <li>Mail: tecnoclph@gmail.com</li>
+                </ul>
+                
+            </div>
+
+            <div class="information">
+                <p class="title-footer">Información</p>
+                <ul>
+                    <li><a href="#">Acerca de Nosotros</a></li>
+                    <li><a href="#">Información Delivery</a></li>
+                    <li><a href="politicas.html">Politicas de Privacidad</a></li>
+                    <li><a href="terminos.html">Términos y condiciones</a></li>
+                    <li><a href="social.html">Contactános</a></li>
+                </ul>
+            </div>
+
+        
+
+            
+        </div>
+
+        <div class="copyright">
+            <p>
+                Desarrollado por Older &copy; 2022
+            </p>
+
+            
+        </div>
+    </div>
+</footer>
+
+
+  <!-- Agregar la hoja de estilos para "shop.html" -->
+  <link rel="stylesheet" href="shop.css">
+  <script
+  src="https://kit.fontawesome.com/81581fb069.js"
+  crossorigin="anonymous"
+></script>
+</body>
+</html>

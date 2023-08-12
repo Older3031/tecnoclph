@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"/>
+		<title>Explorar</title>
+		<link rel="stylesheet" href="productos.css" />
+		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="styles.css">
+		<link rel="icon" href="https://cdn.discordapp.com/attachments/920845161334968361/1129209492312182894/b02f1046-9c9a-43b7-a044-167cb65ae5b1.jpeg">
+		<style>
+            /* Estilos para centrar el mensaje y hacer el texto más grande */
+            main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+    
+            .no-products-message {
+                text-align: center;
+            }
+    
+            .no-products-message h2 {
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+    
+            .no-products-message p {
+                font-size: 18px;
+            }
+    
+            .image-placeholder {
+                width: 500px;
+                height: 300px;
+                /* Puedes ajustar el tamaño de la imagen reservada según tus necesidades */
+                border: 1px solid #ccc;
+                /* Solo para visualizar el espacio reservado, puedes eliminar esto en producción */
+            }
+        </style>
+	</head>
+	<body>
+		<header>
+			<div class="container-hero">
+				<div class="container hero">
+					<div class="customer-support">
+						<i class="fa-solid fa-headset"></i>
+						<div class="content-customer-support">
+							<span class="text">Soporte al cliente</span>
+							<span class="number">tecnoclph@gmail.com</span>
+						</div>
+					</div>
+
+					<div class="container-logo">
+						<i class="fa-solid fa-mobile"></i>
+						<h1 class="logo"><a href="/">TECNOCLPH</a></h1>
+					</div>
+
+					<div class="container-user">
+						<a href="login.html"><i class="fa-solid fa-user"></i></a>
+						<a href="shop.html"><i class="fa-solid fa-basket-shopping"></i></a>
+						<div class="content-shopping-cart">
+							<a href="shop.html"><span class="text">Carrito</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-navbar">
+				<nav class="navbar container">
+					<i class="fa-solid fa-bars"></i>
+					<ul class="menu">
+						<li><a href="index.html">Inicio</a></li>
+						<li>
+							<a href="">Telefonos</a> <i class="fa-sharp fa-solid fa-caret-down"></i>
+							<ul class="submenu">
+								<li><a href="telapple.html">Apple</a></li>
+								<li><a href="telsamsung.html">Samsung</a></li>
+								<li><a href="telxiaomi.html">Xiaomi</a></li>
+							</ul>
+				
+						</li>
+						
+						<li>
+							<a href="#">Accesorios</a><i class="fa-sharp fa-solid fa-caret-down"></i>
+							<ul class="submenu">
+								<li><a href="accapple.html">Apple</a></li>
+								<li><a href="accsamsung.html">Samsung</a></li>
+								<li><a href="accxiaomi.html">Xiaomi</a></li>
+							</ul>
+						</li>
+						<li><a href="social.html">Más</a></li>
+						<li><a href="https://twitter.com/tecnoclph">Blog</a></li>
+					</ul>
+
+					<form class="search-form" id="myForm">
+						<input type="search" placeholder="Buscar..." />
+						<button class="btn-search">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</form>
+					
+				</nav>
+			</div>
+		</header>
+
+
+        <main>
+            <!-- Aquí iría el contenido de la sección de productos, pero ahora mostraremos el mensaje -->
+            <div class="no-products-message">
+                <h2> Los productos se han solicitado con éxito </h2>
+                <p>El total de tu compra y la respuesta de nuestro sistema te enviara un mensaje dentro de un plazo de 6 dias.</p>
+            </div>
+    
+            <!-- Reservamos un espacio para la imagen, puedes ajustar los estilos según tus necesidades -->
+            <div class="image-placeholder">
+                <img src="https://i.pinimg.com/originals/95/e9/93/95e993a63883b014107a4806880ed970.gif"><!-- Puedes agregar aquí la etiqueta <img> para mostrar la imagen deseada -->
+                <!-- Por ejemplo: <img src="ruta_de_la_imagen.jpg" alt="Imagen de muestra"> -->
+            </div>
+        </main>
+
+
+
+        <footer class="footer">
+			<div class="container container-footer">
+				<div class="menu-footer">
+					<div class="contact-info">
+						<p class="title-footer">Información de Contacto</p>
+						<ul>
+							<li>
+								Dirección: 6a. avenida 12-51 Zona 1, 5 nivel kiosco 319 Centro Comercial Los Capitol
+							</li>
+							<li>Teléfono: +502 39974796</li>
+							<li>Mail: tecnoclph@gmail.com</li>
+						</ul>
+						
+					</div>
+
+					<div class="information">
+						<p class="title-footer">Información</p>
+						<ul>
+							<li><a href="#">Acerca de Nosotros</a></li>
+							<li><a href="#">Información Delivery</a></li>
+							<li><a href="politicas.html">Politicas de Privacidad</a></li>
+							<li><a href="terminos.html">Términos y condiciones</a></li>
+							<li><a href="social.html">Contactános</a></li>
+						</ul>
+					</div>
+
+				
+
+					
+				</div>
+
+				<div class="copyright">
+					<p>
+						Desarrollado por Older &copy; 2022
+					</p>
+
+					
+				</div>
+			</div>
+		</footer>
+		
+		<script
+			src="https://kit.fontawesome.com/81581fb069.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,145 @@
+.banner {
+	background-image: linear-gradient(100deg, #000000, #00000020),
+		url('https://www.lavanguardia.com/andro4all/hero/2021/02/El-iPhone-12-junto-al-Xiaomi-Mi-11.jpg?width=768&aspect_ratio=16:9&format=nowebp');
+	height: 60rem;
+	background-size: cover;
+	background-position: center;
+}
+
+.content-banner {
+	max-width: 90rem;
+	margin: 0 auto;
+	padding: 25rem 0;
+}
+
+.content-banner p {
+	color: var(--primary-color);
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+	font-weight: 500;
+}
+
+.content-banner h2 {
+	color: #fff;
+	font-size: 3.5rem;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+.content-banner a {
+	margin-top: 2rem;
+	text-decoration: none;
+	color: #fff;
+	background-color: var(--primary-color);
+	display: inline-block;
+	padding: 1rem 3rem;
+	text-transform: uppercase;
+	border-radius: 3rem;
+}
+
+
+
+
+
+
+.banner2{
+    margin:auto auto;
+    width:80vw;
+    min-height:300px;
+    background-size:cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-image:url(https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2023/04/redmi-note-12-5g-redmi-note-12-pro-3014704.jpg);
+    background-attachment: fixed;
+    border-radius:400px;
+  /*  This controls the border's color, thickness and opacity  */
+    border: 24px solid rgba(255, 255, 255, .4);
+  } 
+  li:hover{
+    background: #c27fb7;
+    border-radius:12px;
+  }
+  .breadcrumbs{
+    font-family:"Poppins", sans-serif;
+    font-weight:500;
+    font-size:0.9em;
+    text-transform:uppercase;
+    list-style: none;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns:auto auto auto;
+    padding:16px;
+    width:500px;
+    position:relative;
+    bottom:50px;
+    left:250px;
+    border-radius:32px;
+    text-align:center;
+    margin-bottom:0px;
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  
+  
+  .container{
+    padding: 10px 0;
+    margin: 0 auto;
+    width: 1140px;
+  }
+  
+
+  
+  .gallery-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70vh;
+  }
+  
+  .item {
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    transition: flex 0.8s ease;
+    
+    &:hover{
+      flex: 7;
+    }
+  }
+ 
+  .item-1 { 
+    background-image: url('https://cdn.discordapp.com/attachments/920845161334968361/1131387298240548904/Acerca_de_Nosotros_12.png');
+  }
+  
+  .item-2 { 
+    background-image: url('https://cdn.discordapp.com/attachments/920845161334968361/1131386635821535283/Acerca_de_Nosotros_11.png');
+  }
+  
+  .item-3 { 
+    background-image: url('https://cdn.discordapp.com/attachments/920845161334968361/1131386251828797572/Acerca_de_Nosotros_10.png');
+  }
+  
+  .item-4 { 
+    background-image: url('https://cdn.discordapp.com/attachments/920845161334968361/1131385672771584000/Acerca_de_Nosotros_9.png');
+  }
+  
+  .item-5 { 
+    background-image: url('https://cdn.discordapp.com/attachments/920845161334968361/1131385286924972053/Acerca_de_Nosotros_8.png');
+  }
+  
+  .social{
+    position: absolute;
+    right: 35px;
+    bottom: 0;
+    
+    img{
+      display: block;
+      width: 32px;
+    }
+  }
